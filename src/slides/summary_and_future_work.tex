@@ -1,0 +1,28 @@
+\section{Summary and Future Work}
+    \begin{frame}{Summary}
+        The compiler itself
+        \begin{itemize}
+            \item Implemented in C++
+            \item Compiles in ~30s
+            \item Fast compilation
+            \item Fast runtime
+            \item Custom AST/ASR tree representation and visitors
+            \item Quickly loads and runs in a webpage
+            \item \href{https://dev.lpython.org/}{https://dev.lpython.org/}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Future Work}
+        \begin{itemize}
+            \item More complete NumPy support (arrays)
+            \item Strong support for structs and pointers (allows general
+            programming)
+            \item Make sure LPython is at least as fast as C++ for every simple
+            benchmark (currently we have a few where we are slower)
+            \item Make ‘@pythoncall‘ work with the LLVM backend
+            \item Allow to extend LPython with custom hardware backends
+            (GPU, APU, ...)
+            \item Use LPython for bigger projects (ML, compilers, etc.)
+            \item Optimizations
+        \end{itemize}
+    \end{frame}

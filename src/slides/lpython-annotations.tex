@@ -1,0 +1,49 @@
+\section{LPython Annotation Types}
+
+\begin{frame}{LPython - Annotation Types}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \tiny
+            \lstinputlisting[language=Python]{codes/lpython-annotations-1.py}
+            \centering Annotations for variables
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Supports Integer types - \texttt{i8}, \texttt{i16}, \texttt{i32}, \texttt{i64}
+                \item Similarly unsigned integers
+                \item Floating points and Complex numbers
+                \item Constant variables that need initialization value at the time of declaration
+                \item Aggregate types like \texttt{list}, \texttt{tuple}, \texttt{classes} and more
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{LPython - Annotation Types}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \tiny
+            \lstinputlisting[language=Python]{codes/lpython-annotations-2.py}
+            \centering Annotations, decorators for functions
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Annotate function parameters and return types
+                \item Supports generics.
+                \begin{itemize}
+                    \item \scriptsize{We have ongoing work on it.}
+                \end{itemize}
+                \item Supports specifying intents (In, InOut, Out) for function parameters.
+                \begin{itemize}
+                    \item \scriptsize{\texttt{In} - variable cannot be modified}
+                    \item \scriptsize{\texttt{InOut} - variable can be modified}
+                \end{itemize}
+                \item \texttt{@lpython} and \texttt{@pythoncall} decorators
+                \begin{itemize}
+                    \item \scriptsize \texttt{lpython} calling from CPython into LPython 
+                    \item \scriptsize \texttt{pythoncall} calling from LPython into CPython
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}

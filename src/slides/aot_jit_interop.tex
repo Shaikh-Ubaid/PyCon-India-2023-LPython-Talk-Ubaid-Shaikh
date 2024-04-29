@@ -1,0 +1,54 @@
+\section{Ahead of Time, Just In Time and CPython Interoperability}
+
+\begin{frame}{Ahead of Time and Just In Time Compilation}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering AOT
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering JIT
+        \end{column}
+    \end{columns}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item By default compiles to LLVM when no backend is specified
+                \item Other backends can be used by using \texttt{--backend=c}
+                \item Supports C, C++, WASM, WASM\_X64 (which generates a lean binary)
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Just decorate Python function with \texttt{@lpython}
+                \item Specifying the desired backend as, \texttt{@lpython(backend="c")} or \texttt{@lpython(backend="llvm")}
+                \item Supports C Backend at the moment, LLVM and others planned
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Interoperability with CPython}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering email\_extractor.py (LPython)
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering email\_extractor\_util.py (CPython)
+        \end{column}
+    \end{columns}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \tiny
+            \lstinputlisting[language=Python]{codes/interop-1.py}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \tiny
+            \lstinputlisting[language=Python]{codes/interop-2.py}
+        \end{column}
+    \end{columns}
+    \begin{itemize}
+        \item Supports C backend currently
+        \scriptsize
+        \lstinputlisting[language=Bash]{codes/bash-email-extractor-output.txt}
+    \end{itemize}
+\end{frame}

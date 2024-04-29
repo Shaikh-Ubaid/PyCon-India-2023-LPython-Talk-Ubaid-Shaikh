@@ -1,0 +1,24 @@
+\section{Benchmarks}
+    
+\begin{frame}{LPython compared to C++}
+    \begin{columns}
+        \scalebox{.25}{
+        \begin{column}{1.6\textwidth}
+            \lstinputlisting[language=Python]{codes/dijkstra-code.py}
+        \end{column}
+        }
+        \begin{column}{0.6\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=7cm]{images/benchmark.png}
+            \end{figure}
+            \scriptsize \centering Note that the following optimization flags were used:
+            \begin{figure}
+                \centering
+                \includegraphics[width=5cm]{images/optimization-flags.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    \scriptsize
+    More Benchmarks at \href{https://lpython.org/blog/2023/07/lpython-novel-fast-retargetable-python-compiler/}{https://lpython.org/blog/2023/07/lpython-novel-fast-retargetable-python-compiler/}
+\end{frame}

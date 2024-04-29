@@ -1,0 +1,77 @@
+\documentclass[xcolor=table]{cubeamer}
+\usepackage{algorithm} % for using algorithm
+\usepackage{algpseudocode} % for using algorithm
+\usepackage{adjustbox} % for autoscaling of large table
+\usepackage{pifont}%  % for checkmark and crossmark http://ctan.org/pkg/pifont
+\usepackage{listings}
+\usepackage{xcolor}
+
+% setups
+% \captionsetup[table]{skip=10pt}
+\setbeamerfont{bibliography item}{size=\scriptsize}
+\setbeamerfont{bibliography entry author}{size=\scriptsize}
+\setbeamerfont{bibliography entry title}{size=\scriptsize}
+\setbeamerfont{bibliography entry location}{size=\scriptsize}
+\setbeamerfont{bibliography entry note}{size=\scriptsize}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{LPython: Novel, Fast, Retargetable Python Compiler}
+\subtitle{PyCon India 2023}
+
+\author[Shaikh et al.]{
+\texorpdfstring{\centering{Ubaid Shaikh, Ondřej Čertík, Brian Beckman, Gagandeep Singh, Thirumalai Shaktivel, Smit Lunagariya, Naman Gera, Pranav Goswami, Rohit Goswami, Dominic Poerio, Akshānsh Bhatt, Virendra Kabra, Anutosh Bhat, Luthfan Lubis, Dylon Thomas}}{Ubaid Shaikh, Ondřej Čertík, Brian Beckman, Gagandeep Singh, Thirumalai Shaktivel, Smit Lunagariya, Naman Gera, Pranav Goswami, Rohit Goswami, Dominic Poerio, Akshānsh Bhatt, Virendra Kabra, Anutosh Bhat, Luthfan Lubis, Dylon Thomas}
+}
+
+\date{September 30, 2023}
+
+% \institute[GSI Technology]{GSI Technology}
+% \copyrightnotice{Published by the American Institute of Aeronautics and Astronautics, Inc., with permission}
+
+% defining commands
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\begin{document}
+
+\maketitle
+
+% \cutoc
+
+\input{slides/introduction}
+\input{slides/lpython}
+\input{slides/online-demo}
+\input{slides/lpython-annotations}
+\input{slides/ast_and_asr}
+\input{slides/backends}
+\input{slides/aot_jit_interop}
+% \input{slides/benchmarks}
+\input{slides/summary_and_future_work}
+\input{slides/ending}
+
+\end{document}

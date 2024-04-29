@@ -1,0 +1,2 @@
+% lpython email_extractor.py --backend=c --enable-cpython
+lpython@lcompilers.org

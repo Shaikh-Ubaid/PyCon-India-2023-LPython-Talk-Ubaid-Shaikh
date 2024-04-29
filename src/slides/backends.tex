@@ -1,0 +1,64 @@
+\section{Backends}
+
+\begin{frame}{Backends}
+    \begin{itemize}
+        \item Can compile Type-annotated Python code to different targets
+        \item Current supported backends
+            \begin{itemize}
+                \item LLVM
+                \item C
+                \item C++
+                \item WASM
+                \item X64 (via WASM)
+            \end{itemize}
+        \item Other backends planned (Python, Fortran, etc.)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{LPython - Usage}
+    \scriptsize
+    \begin{itemize}
+        \item \texttt{lpython main.py --show-tokens}
+        \item \texttt{lpython main.py --show-ast}
+        \item \texttt{lpython main.py --show-ast --tree}
+        \item \texttt{lpython main.py --show-ast --json}
+        \item \texttt{lpython main.py --show-ast --visualize} (earlier image)
+       \item \texttt{lpython main.py --show-asr}
+        \item \texttt{lpython main.py --show-asr --tree}
+        \item \texttt{lpython main.py --show-asr --json}
+        \item \texttt{lpython main.py --show-asr --visualize} (earlier image)
+        \item \texttt{lpython main.py --show-c}
+        \item \texttt{lpython main.py --show-cpp}
+        \item \texttt{lpython main.py --show-wat}
+        \item \texttt{lpython main.py --show-llvm}
+        \item \texttt{lpython main.py} (by default LLVM backend is used. Compiles and runs the code)
+        \item \texttt{lpython main.py --backend=llvm}
+        \item \texttt{lpython main.py --backend=c}
+        \item \texttt{lpython main.py --backend=wasm}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Example of compiling to C}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \tiny
+            \lstinputlisting[language=Python]{codes/backend-example.py}
+            \centering main.py
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \texttt{\$ lpython main.py --show-c > main.c}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Example of compiling to C}
+    \tiny
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \lstinputlisting[language=C]{codes/backend-example-show-c-1.c}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \lstinputlisting[language=C]{codes/backend-example-show-c-2.c}
+        \end{column}
+    \end{columns}
+\end{frame}
